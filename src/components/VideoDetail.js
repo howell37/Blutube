@@ -7,7 +7,7 @@ const VideoDetail = ({ video }) => {
     return <CircularProgress disableShrink />;
   }
 
-  console.log(video);
+  // console.log(video);
   return (
     <div id="mainVidDiv">
       {video &&

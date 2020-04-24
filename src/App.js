@@ -25,9 +25,6 @@ function App() {
     setVideo(resp.data.items);
     setSelectedVideo(resp.data.items[0]);
   };
-  useEffect(() => {
-    handleSubmit();
-  }, []);
 
   return (
     <div>

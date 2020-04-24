@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Python from "./Python";
 
 const Category = ({ onSubmit }) => {
-  const onClick = () => {
-    onSubmit("python");
+  const lang = useRef();
+  const handleClick = (arg) => {
+    onSubmit(arg);
   };
   return (
     <div id="mainCatDiv">
-      <div id="pythonDiv" onClick={onClick}>
+      <div
+        ref={lang}
+        id="pythonDiv"
+        name="python"
+        onClick={() => handleClick("python")}
+      >
         <Python />
         <h1>Python</h1>
         <p>
@@ -18,7 +24,7 @@ const Category = ({ onSubmit }) => {
         </p>
       </div>
 
-      <div id="jsDiv">
+      <div id="jsDiv" onClick={() => handleClick("javascript")}>
         <h1>Javascript</h1>
       </div>
       <div id="reactDiv">
